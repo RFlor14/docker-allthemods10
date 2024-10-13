@@ -1,5 +1,5 @@
 # [All the Mods 10-1.0.0](https://www.curseforge.com/minecraft/modpacks/all-the-mods-10) on Curseforge
-(UN-Official)
+(UN-Official, Work in Progress)
 <!-- toc -->
 
 - [Description](#description)
