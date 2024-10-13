@@ -23,8 +23,8 @@ if ! [[ -f 'Server-Files-1.0.0.zip' ]]; then
 		cd /data
 		rm -fr "$DIR_TEST"
 	fi
-	curl -Lo forge-${NEOFORGE_VERSION}-installer.jar http://files.neoforged.net/maven/net/neoforged/neoforge/$NEOFORGE_VERSION/neoforge-$NEOFORGE_VERSION-installer.jar
-	java -jar forge-${NEOFORGE_VERSION}-installer.jar --installServer
+	curl -Lo neoforge-${NEOFORGE_VERSION}-installer.jar http://files.neoforged.net/maven/net/neoforged/neoforge/$NEOFORGE_VERSION/neoforge-$NEOFORGE_VERSION-installer.jar
+	java -jar neoforge-${NEOFORGE_VERSION}-installer.jar --installServer
 fi
 
 #!https://maven.minecraftforge.net/net/minecraftforge/forge/1.21.1-52.0.20/forge-1.21.1-52.0.20-installer.jar
