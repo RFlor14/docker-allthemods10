@@ -2,7 +2,7 @@
 
 set -x
 
-FORGE_VERSION=1.20.1-47.3.7
+NEOFORGE_VERSION=21.1.69
 cd /data
 
 if ! [[ "$EULA" = "false" ]]; then
@@ -12,10 +12,10 @@ else
 	exit 99
 fi
 
-if ! [[ -f 'Server-Files-0.3.2.zip' ]]; then
+if ! [[ -f 'Server-Files-1.0.0.zip' ]]; then
 	rm -fr config defaultconfigs kubejs mods packmenu Simple.zip forge*
-	curl -Lo 'Server-Files-0.3.2.zip' 'https://edge.forgecdn.net/files/5682/556/Server-Files-0.3.2.zip' || exit 9
-	unzip -u -o 'Server-Files-0.3.2.zip' -d /data
+	curl -Lo 'Server-Files-1.0.0.zip' 'https://edge.forgecdn.net/files/5807/254/Server-Files-1.0.zip' || exit 9
+	unzip -u -o 'Server-Files-1.0.0.zip' -d /data
 	DIR_TEST=$(find . -type d -maxdepth 1 | tail -1 | sed 's/^.\{2\}//g')
 	if [[ $(find . -type d -maxdepth 1 | wc -l) -gt 1 ]]; then
 		cd "${DIR_TEST}"
@@ -23,9 +23,12 @@ if ! [[ -f 'Server-Files-0.3.2.zip' ]]; then
 		cd /data
 		rm -fr "$DIR_TEST"
 	fi
-	curl -Lo forge-${FORGE_VERSION}-installer.jar http://files.minecraftforge.net/maven/net/minecraftforge/forge/$FORGE_VERSION/forge-$FORGE_VERSION-installer.jar
-	java -jar forge-${FORGE_VERSION}-installer.jar --installServer
+	curl -Lo forge-${NEOFORGE_VERSION}-installer.jar http://files.neoforged.net/maven/net/neoforged/neoforge/$NEOFORGE_VERSION/neoforge-$NEOFORGE_VERSION-installer.jar
+	java -jar forge-${NEOFORGE_VERSION}-installer.jar --installServer
 fi
+
+#!https://maven.minecraftforge.net/net/minecraftforge/forge/1.21.1-52.0.20/forge-1.21.1-52.0.20-installer.jar
+#!https://maven.neoforged.net/releases/net/neoforged/neoforge/21.1.69/neoforge-21.1.69-installer.jar
 
 if [[ -n "$JVM_OPTS" ]]; then
 	sed -i '/-Xm[s,x]/d' user_jvm_args.txt
