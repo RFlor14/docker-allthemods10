@@ -58,7 +58,12 @@ This container is designed for [Unraid](https://unraid.net) so the user in the c
 ### Resetting
 If the install is incomplete for some reason.  Deleting the downloaded server file in /data will restart the install/upgrade process.
 
-## Source / Fork From
+## Source 
+
+Github: https://github.com/RFlor14/docker-allthemods10
+Docker: https://hub.docker.com/repository/docker/r14f/allthemods10
+
+## Fork From
 
 Github: https://github.com/Goobaroo/docker-allthemods9
 Docker: https://hub.docker.com/repository/docker/goobaroo/allthemods9
