@@ -37,7 +37,7 @@ As the end user, you are repsonsible for accepting the EULA from Mojang to run t
 These environment variables can be set at run time to override their defaults.
 
 * JVM_OPTS "-Xms2048m -Xmx4096m"
-* MOTD "All the Mods 9-0.3.2 Server Powered by Docker"
+* MOTD "All the Mods 10-1.0.0 Server Powered by Docker"
 * LEVEL world
 
 ### Adding Minecraft Operators
